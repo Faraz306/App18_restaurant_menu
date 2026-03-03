@@ -6,13 +6,17 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-4 mb-4">Yamaan Faraz YF Official Restaurant Menu</h1>
+        <h1 class="mt-4 mb-4">Yamaan Faraz YF® Official Restaurant Menu</h1>
         <h1 class="mt-4 mb-4">Our Delicious Menu 😋</h1>
     </div>
     <div>
-        <h3>Starters</h3>
-        <h4>{{ meals }}</h4>
-        <h4>{{ ingredients }}</h4>
+        {% for meal in meals %}
+        <h2>{{ meal.1 }}</h2>
+        {% for row in item_list %}
+        <h3>{{ row.meal }}</h3>
+        <p>{{ row.description }}</p>
+        {% endfor %}
+        {% endfor %}
     </div>
 </body>
 </html>
